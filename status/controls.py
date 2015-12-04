@@ -99,3 +99,17 @@ def process_message(data):
         message = controls_main(data)
         outputs.append([data['channel'], "{}".format(message)])
     return
+
+def process_help():
+    dm_help = []
+    channel_help = []
+    plugin_help = []
+
+    # setup help
+    dm_help.append("restart - Restarts the bot. Admin only command")
+    dm_help.append("stop - Stops the bot. Admin only command")
+
+    plugin_help.append(dm_help)
+    plugin_help.append(channel_help)
+    return plugin_help
+

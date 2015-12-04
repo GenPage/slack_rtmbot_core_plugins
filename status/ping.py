@@ -31,3 +31,16 @@ def process_message(data):
     if match:
         outputs.append([data['channel'], "{}".format(OUTPUT_MESSAGE)])
     return
+
+def process_help():
+    dm_help = []
+    channel_help = []
+
+    plugin_help = []
+    # setup help
+    dm_help.append("ping - Bot responds with {} if it is running".format(OUTPUT_MESSAGE))
+    channel_help.append("ping - Bot responds with {} if it is running".format(OUTPUT_MESSAGE))
+
+    plugin_help.append(dm_help)
+    plugin_help.append(channel_help)
+    return plugin_help

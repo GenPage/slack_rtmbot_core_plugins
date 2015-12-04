@@ -46,3 +46,17 @@ def process_message(data):
         message = status_main()
         outputs.append([data['channel'], "{}".format(message)])
     return
+
+def process_help():
+    dm_help = []
+    channel_help = []
+    plugin_help = []
+
+    # setup help
+    dm_help.append("status - Responds with some basic status on the server running the bot")
+    channel_help.append("status - Responds with some basic status on the server running the bot")
+
+
+    plugin_help.append(dm_help)
+    plugin_help.append(channel_help)
+    return plugin_help

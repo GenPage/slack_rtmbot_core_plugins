@@ -8,8 +8,6 @@ import yaml
 from slackclient import SlackClient
 
 outputs = []
-dm_help = []
-channel_help = []
 
 # load our config file
 auth_config = yaml.load(file('conf/auth.conf', 'r'))

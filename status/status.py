@@ -41,7 +41,7 @@ def process_directmessage(data):
 
 
 def process_message(data):
-    match = re.match(r"{} status".format(config['USERNAME']), data['text'], flags=re.IGNORECASE)
+    match = re.match(r"{} status".format(config['BOT_NAME']), data['text'], flags=re.IGNORECASE)
     if match:
         message = status_main()
         outputs.append([data['channel'], "{}".format(message)])

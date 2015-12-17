@@ -26,7 +26,7 @@ def process_message(data):
     :param data:
     :return:
     """
-    match = re.match(r"{} ping".format(config['BOTNAME']), data['text'], flags=re.IGNORECASE)
+    match = re.match(r"{} ping".format(config['BOT_NAME']), data['text'], flags=re.IGNORECASE)
 
     if match:
         outputs.append([data['channel'], "{}".format(OUTPUT_MESSAGE)])
@@ -39,7 +39,7 @@ def process_help():
     plugin_help = []
     # setup help
     dm_help.append("ping - Bot responds with {} if it is running".format(OUTPUT_MESSAGE))
-    channel_help.append("{} ping - Bot responds with {} if it is running".format(config['BOTNAME'],OUTPUT_MESSAGE))
+    channel_help.append("{} ping - Bot responds with {} if it is running".format(config['BOT_NAME'],OUTPUT_MESSAGE))
 
     plugin_help.append(dm_help)
     plugin_help.append(channel_help)

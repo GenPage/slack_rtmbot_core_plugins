@@ -26,7 +26,7 @@ def update_user_list():
     # doing a direct connection to the slack API here to retrieve the users
     # list
     try:
-        sc = SlackClient(auth_config["SLACK_TOKEN"])
+        sc = SlackClient(config["SLACK_TOKEN"])
         data = json.loads(sc.api_call("users.list"))
     # generic except, I do not know what exceptions the api could throw
     except:

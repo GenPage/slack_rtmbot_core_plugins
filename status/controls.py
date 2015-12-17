@@ -94,7 +94,7 @@ def process_directmessage(data):
 
 
 def process_message(data):
-    match = re.match(r"{} (restart|stop)".format(config['USERNAME']), data['text'], flags=re.IGNORECASE)
+    match = re.match(r"{} (restart|stop)".format(config['BOTNAME']), data['text'], flags=re.IGNORECASE)
     if match:
         message = controls_main(data)
         outputs.append([data['channel'], "{}".format(message)])
